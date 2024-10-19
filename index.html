@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Files and Send</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Upload Files and Send</h2>
+      <form id="fileForm" method="post" enctype="multipart/form-data">
+        <label for="announcementId">Announcement Id</label>
+        <input type="text" id="announcementId" name="announcementId" multiple />
+        <div style="margin-bottom: 10px"></div>
+
+        <!-- ფაილების არჩევა -->
+        <label for="files">Choose files</label>
+        <input type="file" id="files" name="files" multiple />
+        <div class="file-list" id="fileList"></div>
+
+        <h2>Paste screenshot with Ctrl+V</h2>
+        <input id="textArea" rows="10" cols="50" placeholder="Try pasting an image here...">
+        <br>
+        <br>
+        <br>
+        <div id="imageContainer"></div>
+
+        <!-- კომენტარის ველი -->
+        <label for="comment">Comment</label>
+        <textarea
+          id="comment"
+          name="comment"
+          placeholder="Enter your comment here..."
+        ></textarea>
+
+        <label for="status">Choose Status</label>
+        <select id="status" name="status">
+          <option value="InProcess">In Process</option>
+          <option value="Sent">Sent</option>
+          <option value="Reject">Reject</option>
+          <option value="Finished">Finished</option>
+          <option value="Approved">Approved</option>
+        </select>
+
+        <!-- მიმღების არჩევა -->
+        <label for="recipientEmail">Choose recipient</label>
+        <select id="recipientEmail" name="recipientEmail">
+          <option value="zz.iakobishvili@gmail.com">Gmail</option>
+          <option value="zurab.iakobishvili@outlook.com">Outlook</option>
+          <option value="kmegrelishvili@credo.ge">Qristi</option>
+        </select>
+
+        <!-- გაგზავნის ღილაკი -->
+        <button type="submit">Send Files and Comment</button>
+      </form>
+    </div>
+
+    <h2>SME Announcements</h2>
+    <div class="sme-table">
+      <table id="smeAnnouncementsTable">
+        <thead>
+          <tr>
+            <th>Announcement ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Created</th>
+            <th>Comment</th>
+            <th>Period</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- ცხრილის მონაცემები ჩაიტვირთება JavaScript-ით -->
+        </tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+    <script src="insertScreen.js"></script>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    text-align: center;
+    color: #333;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+input[type="file"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+.file-list {
+    margin-bottom: 15px;
+}
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 4px;
+}
+.remove-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.remove-btn:hover {
+    background-color: #e60000;
+}
+
+smeAnnouncementsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#smeAnnouncementsTable th,
+#smeAnnouncementsTable td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#smeAnnouncementsTable th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    color: #444;
+}
+
+#smeAnnouncementsTable tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+#smeAnnouncementsTable td:first-child {
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+/* სტატუსის სტილი */
+#smeAnnouncementsTable .status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+#smeAnnouncementsTable .status-0 {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* თარიღის სტილი */
+#smeAnnouncementsTable .created-date {
+    white-space: nowrap;
+}
+
+/* რესპონსიული დიზაინი */
+@media screen and (max-width: 600px) {
+    #smeAnnouncementsTable {
+        font-size: 0.8em;
+    }
+
+    #smeAnnouncementsTable th,
+    #smeAnnouncementsTable td {
+        padding: 8px 10px;
+    }
+}
+
+.sme-table {
+    display: flex;
+    justify-content: center;
+}
